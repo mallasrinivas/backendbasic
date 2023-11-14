@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: ["http://localhost:5173/", "https://frontendbasic.vercel.app/"],
+    origin: ["http://localhost:5173", "https://frontendbasic.vercel.app"],
   })
 );
 app.use((req, res, next) => {
