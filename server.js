@@ -10,7 +10,11 @@ dotenv.config();
 
 app.use(bodyParser.json());
 app.use(morgan("dev"));
-app.use(cors({ origin: "http://localhost:5173/" }));
+app.use(
+  cors({
+    origin: ["http://localhost:5173/", "https://frontendbasic.vercel.app/"],
+  })
+);
 
 app.get("/", (req, res) => {
   res.status(200).send({
