@@ -1,2 +1,5 @@
-# HomeopathyAppBackEnd
-Application for Homeopathy app Backend
+# Basic Backend app
+npm install 
+
+# Start
+npm start
