@@ -15,6 +15,17 @@ app.use(
     origin: ["http://localhost:5173/", "https://frontendbasic.vercel.app/"],
   })
 );
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://frontendbasic.vercel.app"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  next();
+});
 
 app.get("/", (req, res) => {
   res.status(200).send({
